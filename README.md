@@ -135,10 +135,10 @@ Follow the steps below to implement the core functionality of the Longhorn Netwo
 #### 5. Connection Strength (`calculateConnectionStrength`)
 - **Task**: Implement a formula to calculate the connection strength between two students based on the following criteria:
   - **Roommate**: Add 5 if they are roommates.
-  - **Pod Member**: Add 4 if they are in the same pod.
-  - **Shared Internships**: Add 3 for each shared internship.
-  - **Chat History**: Add 2 if they have interacted.
-  - **Same Major**: Add 1 if they share the same major.
+  - **Shared Internships**: Add 4 for each shared internship.
+  - **Chat History**: Add 3 if they have interacted or are friends.
+  - **Same Major**: Add 2 if they share the same major.
+  - **Same Gender**: Add 1 if they are the same age.
 
 - **Details**:
   - This method will be implemented in the `UniversityStudent` class as an override of the abstract method in `Student`.
@@ -201,4 +201,87 @@ Follow the steps below to implement the core functionality of the Longhorn Netwo
 
 
 ---
+
+### Suggestions for `StudentGraph`
+
+The `StudentGraph` class is intentionally left for you to design and implement. This component is critical for both pod formation (using Prim’s algorithm) and referral path finding (using Dijkstra’s algorithm). Follow the steps below to implement it effectively.
+
+---
+
+#### 1. Purpose of the Graph
+The `StudentGraph` represents the relationships between students as a weighted graph. Each student is a node, and the connection strength between two students is an edge with a corresponding weight.
+
+---
+
+#### 2. Key Requirements
+The graph should support the following:
+1. Adding students as nodes.
+2. Adding edges between students with weights (connection strengths).
+3. Efficient traversal for algorithms like Prim’s and Dijkstra’s.
+
+---
+
+#### 3. Recommended Design
+- Use an **Adjacency List** for the graph representation:
+  - Each student (node) maps to a list of edges, where each edge connects to another student and has a weight.
+  - Example:
+    ```
+    Alice -> [(Bob, 7), (Charlie, 5)]
+    Bob   -> [(Alice, 7), (Charlie, 2)]
+    ```
+
+---
+
+#### 4. Methods to Implement
+Here are the key methods you should include in the `StudentGraph` class:
+
+1. **Constructor**:
+   - Initialize the graph structure (e.g., an adjacency list).
+   - Add all students to the graph.
+
+2. **Add Edge**:
+   - Add a weighted edge between two students.
+   - Ensure the graph is undirected by adding the edge in both directions.
+
+3. **Get Neighbors**:
+   - Return a list of edges connected to a specific student.
+   - Useful for traversal algorithms like Prim’s and Dijkstra’s.
+
+4. **Get All Nodes**:
+   - Return all nodes (students) in the graph.
+   - Useful for initializing traversal algorithms.
+
+---
+
+#### 5. Implementation Steps
+1. **Build the Graph**:
+   - Iterate over all pairs of students.
+   - For each pair, calculate the connection strength using `calculateConnectionStrength`.
+   - Add an edge between the two students with the calculated weight.
+
+2. **Example Scenario**:
+   - Given students Alice, Bob, and Charlie:
+     - If Alice has a connection strength of 7 with Bob, and 5 with Charlie:
+       ```
+       Alice -> [(Bob, 7), (Charlie, 5)]
+       Bob   -> [(Alice, 7)]
+       Charlie -> [(Alice, 5)]
+       ```
+
+---
+
+#### 6. Testing the Graph
+Test your graph implementation before using it in algorithms:
+- Print the adjacency list to ensure edges and weights are correct.
+- Test with edge cases:
+  1. Students with no connections.
+  2. Students with identical connection strengths to multiple others.
+
+---
+
+### Notes for Students
+- The `StudentGraph` class provides the foundation for both pod formation and referral path finding. Ensure your implementation is robust and efficient.
+- Use the provided method signatures and adjust as needed to meet the requirements of Prim’s and Dijkstra’s algorithms.
+- Ask questions during lab sessions or office hours if you’re stuck. Debugging the graph structure is critical for completing this assignment successfully.
+
 
