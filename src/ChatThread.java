@@ -1,3 +1,8 @@
+
+/**
+ * Ths s the class
+ */
+
 public class ChatThread implements Runnable {
     public ChatThread(UniversityStudent sender, UniversityStudent receiver, String message) {
         // Constructor

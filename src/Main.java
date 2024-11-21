@@ -1,6 +1,15 @@
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * ght no seveal of the keys on my keyboad do not ok and ths my text s all messed p.  dont have enogh tme to fx ght no
+ *so t ll have to stay lke ths ntl  fx my keyboad
+ * 
+ * 
+ *  am gong to commt ths fo no then  ll fx late hen my keyboad s okng agan
+ */
+
+
 public class Main {
     public static void main(String[] args) {
         if (args.length == 0) {
@@ -13,7 +22,7 @@ public class Main {
 
             // Roommate matching
             GaleShapley.assignRoommates(students);
-
+            
             // Pod formation
             StudentGraph graph = new StudentGraph(students);
             PodFormation podFormation = new PodFormation(graph);
