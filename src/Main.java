@@ -2,11 +2,10 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * ght no seveal of the keys on my keyboad do not ok and ths my text s all messed p.  dont have enogh tme to fx ght no
- *so t ll have to stay lke ths ntl  fx my keyboad
+ * This is the main class of my lab 5 project. This class/file primarily serves as the controller for the project.
+ * It handles initializing everything and having the overall flow of the project dependent on what happens here.
  * 
  * 
- *  am gong to commt ths fo no then  ll fx late hen my keyboad s okng agan
  */
 
 
