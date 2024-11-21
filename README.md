@@ -30,7 +30,7 @@ This project simulates a social network called **Longhorn Network**, where stude
 ### Instructions
 
 #### Step 1: Setting Up
-1. **Fork** this repository to start working on your own copy.
+1. **Fork** this repository to start working on your own copy. (Not necessary if you can do step 2-6 without any Forbidden Errors)
 2. **Clone** the repository to your local machine:
    ```bash
    git clone https://github.com/ayushroychowdhury/LonghornNetwork.git
