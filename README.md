@@ -138,7 +138,7 @@ Follow the steps below to implement the core functionality of the Longhorn Netwo
   - **Shared Internships**: Add 4 for each shared internship.
   - **Chat History**: Add 3 if they have interacted or are friends.
   - **Same Major**: Add 2 if they share the same major.
-  - **Same Gender**: Add 1 if they are the same age.
+  - **Same Age**: Add 1 if they are the same age.
 
 - **Details**:
   - This method will be implemented in the `UniversityStudent` class as an override of the abstract method in `Student`.
